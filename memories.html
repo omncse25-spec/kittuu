@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Memories</title><link rel="stylesheet" href="style.css"></head>
+<body><script>if(sessionStorage.getItem("birthdayUnlocked")!=="true") location.href="index.html";</script>
+<nav><a class="logo" href="home.html">B<span>♥</span></a><div class="navlinks"><a href="home.html">Home</a><a class="active" href="memories.html">Memories</a><a href="gallery.html">Gallery</a><a href="letter.html">Letter ✉</a><a href="wishes.html">Wishes</a></div></nav>
+<main class="page">
+<p class="eyebrow">Chapter one</p><h1>Little moments, big memories.</h1>
+<p class="lead">The best memories are usually the random ones — the jokes that made no sense, the conversations that lasted forever, and the moments we never planned.</p>
+<div class="memory-grid">
+  <article><span>01</span><h2>The first laughs</h2><p>Somewhere between normal conversations and silly jokes, our friendship became something genuinely special.</p></article>
+  <article><span>02</span><h2>Our chaos</h2><p>There is always that one friend with whom even the most boring day becomes a story. For me, that's you.</p></article>
+  <article><span>03</span><h2>Always there</h2><p>Thank you for the little check-ins, the random talks, the support and simply being yourself.</p></article>
+  <article><span>04</span><h2>More to come</h2><p>This page is not the end of our memories. It is just a reminder that there are many more chapters waiting for us.</p></article>
+</div>
+<a class="back" href="gallery.html">Continue to our photos →</a></main>
+<footer>One friendship. Countless stories.</footer><div class="music-player"><button id="musicToggle" onclick="toggleMusic()">♫</button><audio id="bgMusic" loop preload="auto"><source src="music/background.mp3" type="audio/mpeg"></audio></div><script>const music=document.getElementById("bgMusic"),toggle=document.getElementById("musicToggle");function toggleMusic(){if(music.paused){music.play();toggle.textContent="♫"}else{music.pause();toggle.textContent="🔇"}}document.addEventListener("click",function startMusic(){music.play().catch(()=>{});document.removeEventListener("click",startMusic)},{once:true});</script>
+</body></html>
