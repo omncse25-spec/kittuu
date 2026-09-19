@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Wishes</title><link rel="stylesheet" href="style.css"></head>
+<body><script>if(sessionStorage.getItem("birthdayUnlocked")!=="true") location.href="index.html";</script>
+<nav><a class="logo" href="home.html">B<span>♥</span></a><div class="navlinks"><a href="home.html">Home</a><a href="memories.html">Memories</a><a href="gallery.html">Gallery</a><a href="letter.html">Letter ✉</a><a class="active" href="wishes.html">Wishes</a></div></nav>
+<main class="page center"><p class="eyebrow">And finally...</p><h1>My wishes for you ✨</h1>
+<div class="wish-list"><div>May you always have something to look forward to.</div><div>May your hard work turn into beautiful results.</div><div>May you find happiness in the smallest moments.</div><div>May our friendship collect a thousand more memories.</div><div>And may this birthday be the beginning of an amazing year.</div></div>
+<h2 class="final-line">Happy Birthday, Bestie! 🎂❤️</h2>
+<a class="btn" href="home.html">Replay the surprise</a></main><footer>Until the next chapter...</footer><div class="music-player"><button id="musicToggle" onclick="toggleMusic()">♫</button><audio id="bgMusic" loop preload="auto"><source src="music/background.mp3" type="audio/mpeg"></audio></div><script>const music=document.getElementById("bgMusic"),toggle=document.getElementById("musicToggle");function toggleMusic(){if(music.paused){music.play();toggle.textContent="♫"}else{music.pause();toggle.textContent="🔇"}}document.addEventListener("click",function startMusic(){music.play().catch(()=>{});document.removeEventListener("click",startMusic)},{once:true});</script>
+</body></html>
