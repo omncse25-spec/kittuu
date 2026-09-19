@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Bestie ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+<div class="stars"></div>
+<main class="login-card">
+  <div class="heart">♥</div>
+  <p class="eyebrow">A little surprise is waiting...</p>
+  <h1>For My Bestie</h1>
+  <p class="subtitle">This little world was made only for you.</p>
+  <form id="loginForm">
+    <label for="password">Enter the secret date</label>
+    <input id="password" type="password" placeholder="DD/MM/YYYY" autocomplete="off">
+    <button type="submit">Unlock My Surprise ✨</button>
+    <p id="error"></p>
+  </form>
+  <small>Hint: It's a very special date.</small>
+</main>
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const password = document.getElementById("password").value.trim();
+  if(password === "24/09/2007" || password === "24-09-2007" || password === "24092007"){
+    sessionStorage.setItem("birthdayUnlocked","true");
+    window.location.href = "home.html";
+  } else {
+    document.getElementById("error").textContent = "Not quite... try the special date again ❤️";
+  }
+});
+</script>
+<div class="music-player"><button id="musicToggle" onclick="toggleMusic()">♫</button><audio id="bgMusic" loop preload="auto"><source src="music/background.mp3" type="audio/mpeg"></audio></div><script>const music=document.getElementById("bgMusic"),toggle=document.getElementById("musicToggle");function toggleMusic(){if(music.paused){music.play();toggle.textContent="♫"}else{music.pause();toggle.textContent="🔇"}}document.addEventListener("click",function startMusic(){music.play().catch(()=>{});document.removeEventListener("click",startMusic)},{once:true});</script>
+</body>
+</html>
