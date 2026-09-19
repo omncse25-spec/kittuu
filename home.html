@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Bestie ❤️</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>if(sessionStorage.getItem("birthdayUnlocked")!=="true") location.href="index.html";</script>
+<nav>
+  <a class="logo" href="home.html">B<span>♥</span></a>
+  <div class="navlinks">
+    <a class="active" href="home.html">Home</a>
+    <a href="memories.html">Memories</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="letter.html">Letter ✉</a>
+    <a href="wishes.html">Wishes</a>
+  </div>
+</nav>
+<header class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">24 September • Your special day</p>
+    <h1>Happy Birthday,<br><span>My Bestie.</span></h1>
+    <p>Some people enter your life and become a beautiful part of your story. You are one of those people for me. So I made this little website just to remind you how special our friendship is.</p>
+    <a class="btn" href="letter.html">Open your letter ✉</a>
+  </div>
+  <div class="hero-photo">
+    <img src="images/hero.jpg" alt="Our favourite photo" onerror="this.src='images/photo1.jpg'">
+    <div class="photo-note">our little universe ♡</div>
+  </div>
+</header>
+<section class="intro">
+  <p class="eyebrow">A tiny corner of the internet</p>
+  <h2>Made with memories, laughter & a lot of love.</h2>
+  <p>Click around. There are memories to revisit, photos to smile at, a letter written especially for you, and a few birthday wishes waiting at the end.</p>
+</section>
+<footer>Made especially for my bestie • 2026</footer>
+<div class="music-player"><button id="musicToggle" onclick="toggleMusic()">♫</button><audio id="bgMusic" loop preload="auto"><source src="music/background.mp3" type="audio/mpeg"></audio></div><script>const music=document.getElementById("bgMusic"),toggle=document.getElementById("musicToggle");function toggleMusic(){if(music.paused){music.play();toggle.textContent="♫"}else{music.pause();toggle.textContent="🔇"}}document.addEventListener("click",function startMusic(){music.play().catch(()=>{});document.removeEventListener("click",startMusic)},{once:true});</script>
+</body></html>
