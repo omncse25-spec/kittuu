@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter For You</title><link rel="stylesheet" href="style.css"></head>
+<body><script>if(sessionStorage.getItem("birthdayUnlocked")!=="true") location.href="index.html";</script>
+<nav><a class="logo" href="home.html">B<span>♥</span></a><div class="navlinks"><a href="home.html">Home</a><a href="memories.html">Memories</a><a href="gallery.html">Gallery</a><a class="active" href="letter.html">Letter ✉</a><a href="wishes.html">Wishes</a></div></nav>
+<main class="letter-page">
+<p class="eyebrow">A handwritten thought, just for you</p>
+<h1>Open this when you need a smile.</h1>
+<div class="envelope-wrap" id="envelope">
+  <div class="envelope">
+    <div class="flap"></div><div class="seal">♥</div>
+    <button onclick="openLetter()">Open your letter</button>
+  </div>
+</div>
+<article class="letter" id="letter">
+  <p class="date">24 • 09 • 2026</p>
+  <h2>Dear Bestie,</h2>
+  <p>Happy Birthday to one of the most special people in my life. I honestly don't know how to put our friendship into a few lines because there are so many little moments that mean a lot to me.</p>
+  <p>Thank you for being there through the random conversations, the laughter, the stupid jokes, the serious talks and all those ordinary days that somehow became memorable just because you were part of them.</p>
+  <p>I hope this new year of your life brings you reasons to smile, people who genuinely care about you, opportunities that make you proud, and countless moments that you will remember for years.</p>
+  <p>No matter how much things change, I hope you always remember that you have a friend who is cheering for you and wishing the absolute best for you.</p>
+  <p>Keep smiling, keep being yourself, and never forget how important you are. ❤️</p>
+  <p class="sign">Always your bestie,<br><strong>Someone who made this little website just for you ♡</strong></p>
+</article>
+</main><footer>Made with a little HTML, CSS & lots of friendship.</footer>
+<script>
+function openLetter(){document.getElementById("envelope").classList.add("opened");setTimeout(()=>document.getElementById("letter").classList.add("show"),650);}
+</script><div class="music-player"><button id="musicToggle" onclick="toggleMusic()">♫</button><audio id="bgMusic" loop preload="auto"><source src="music/background.mp3" type="audio/mpeg"></audio></div><script>const music=document.getElementById("bgMusic"),toggle=document.getElementById("musicToggle");function toggleMusic(){if(music.paused){music.play();toggle.textContent="♫"}else{music.pause();toggle.textContent="🔇"}}document.addEventListener("click",function startMusic(){music.play().catch(()=>{});document.removeEventListener("click",startMusic)},{once:true});</script>
+</body></html>
