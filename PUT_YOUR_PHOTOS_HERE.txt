@@ -1,0 +1,1 @@
+Add your photos here and rename them photo1.jpg ... photo6.jpg. You can also add hero.jpg for the main home-page image.
